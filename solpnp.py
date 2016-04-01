@@ -23,7 +23,7 @@ def draw(img, corners, imgpts):
 axis = np.float32([[3,0,0], [0,3,0], [0,0,-3]]).reshape(-1,3)
 
 # img points
-img = cv2.imread('H://chessboard_for_matlab//chessboard_gray1.jpg')
+img = cv2.imread('./chessboard//chessboard_gray1.jpg')
 grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret, corners = cv2.findChessboardCorners(grey, (9,6), None)
 

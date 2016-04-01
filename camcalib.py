@@ -15,7 +15,7 @@ import glob
 import pdb
 
 # Step 1: Data prep 
-img_list = glob.glob('H://chessboard_for_matlab//chessboard_gray*.jpg')
+img_list = glob.glob('./chessboard/chessboard_gray*.jpg')
 img_list_detected = []
 
 # set opts
@@ -59,7 +59,7 @@ np.savez('calib.npz', cmx=cmx, dist=dist, rvecs=rvecs, tvecs=tvecs)
 
 
 # Step 3: Validation Undistor Image
-img = cv2.imread('./data/left02.jpg')
+img = cv2.imread('./chessboard/chessboard_gray0.jpg')
 img_size = grey.shape[::-1]
 newcmx, roi=cv2.getOptimalNewCameraMatrix(cmx, dist, img_size, 0, img_size)
 
